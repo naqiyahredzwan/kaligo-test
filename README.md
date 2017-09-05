@@ -16,5 +16,5 @@ https://jsfiddle.net/caop7j5z/31/
 ### npm
 
 ```shell
-npm run
+npm start
 ```
