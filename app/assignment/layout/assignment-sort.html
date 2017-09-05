@@ -1,0 +1,19 @@
+<div layout="row" layout-align="end center" layout-margin>
+	<div>
+		<label>Sort By:</label>
+		<div class="btn-group" uib-dropdown>
+			<button id="sort-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+				{{assignmentCtrl.criteria.sort.name || 'Best Deal' | limitTo: 20}}
+				<span ng-class="assignmentCtrl.criteria.sort.icon"></span>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+				<li role="menuitem" ng-repeat="option in assignmentCtrl.sortingList">
+					<a ng-click="assignmentCtrl.criteria.sort = null" ng-if="$index === 0">Best Deal</a>
+					<a ng-click="assignmentCtrl.criteria.sort = option">{{option.name}} <span ng-class="option.icon"></span></p></a>
+					<input type="hidden" name="options" ng-model="assignmentCtrl.criteria.sort" required>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

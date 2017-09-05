@@ -1,0 +1,15 @@
+<div class="panel panel-default" ng-repeat="option in assignmentCtrl.data | assignmentFtr: assignmentCtrl | orderBy:assignmentCtrl.criteria.sort.key:assignmentCtrl.criteria.sort.reverse">
+	<div class="panel-heading">{{option.name}}</div>
+	<div class="panel-body">
+		<span class="md-caption">{{option.address}}</span>
+		<hr>
+		<div layout="row">
+			<div flex="95">
+				<span uib-rating ng-model="option.rating" max="5" read-only="true" aria-labelledby="default-rating"></span> 
+			</div>
+			<div flex>
+				<span class="badge">{{option.trustyou.score.overall}}</span>
+			</div>
+		</div>
+	</div>
+</div>

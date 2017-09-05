@@ -1,0 +1,1 @@
+angular.module('assignment.mod', ['assignment.ctrl', 'assignment.svc'])

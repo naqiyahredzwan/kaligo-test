@@ -1,0 +1,8 @@
+<p>HOTEL STAR RATING</p> 
+<div class="btn-group" data-toggle="buttons-checkbox">
+	<div ng-repeat="check in assignmentCtrl.ratingList">
+		<input type="checkbox" ng-model="assignmentCtrl.criteria.filter.rating[check.value]" ng-false-value="">
+
+		<span uib-rating ng-model="check.value" max="5" read-only="true" aria-labelledby="default-rating"></span>
+	</div>
+</div>
